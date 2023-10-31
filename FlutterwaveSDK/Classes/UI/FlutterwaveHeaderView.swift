@@ -34,7 +34,7 @@ class FlutterwaveHeaderView: UIView {
         super.init(frame: frame)
         addSubview(titleLabel)
         // addSubview(arrowButton)
-        addSubview(button)
+        // addSubview(button)
         setupConstraints()
 
     }
