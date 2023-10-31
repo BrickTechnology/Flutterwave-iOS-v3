@@ -39,19 +39,18 @@ class PaymentServicesViewModel: BaseViewModel{
         makeAPICallRx(request: request, apiRequest: paymentServicesRepository.chargeCard(request:), successHandler: chargeCardResponse,onSuccessOperation: {response in
             // HERE
             let authMode = response.meta?.authorization?.mode ?? ""
-            self.moveToOTP.onNext(response)
-           // switch authMode{
-           // case "pin":
-           //     self.moveToPin.onNext("")
-           // case "otp":
-           //     self.moveToOTP.onNext(response)
-           // case "redirect":
-           //     self.moveToWebView.onNext(response)
-           // case "avs_noauth":
-           //     self.moveToAddressVerification.onNext(response)
-           // default:
-           //     break
-           // }
+            switch authMode{
+            case "pin":
+                self.moveToPin.onNext("")
+            case "otp":
+                self.moveToOTP.onNext(response)
+            case "redirect":
+                self.moveToWebView.onNext(response)
+            case "avs_noauth":
+                self.moveToAddressVerification.onNext(response)
+            default:
+                break
+            }
 
         },apiName: .initCardCharge,apiErrorName: .initCardChargeError)
     }
