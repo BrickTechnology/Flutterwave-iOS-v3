@@ -629,7 +629,7 @@ public class FlutterwavePayViewController: BaseViewController {
 
         self.tableView.backgroundColor = UIColor(hex: "#F2F2F2")
         self.tableView.tableFooterView = UIView(frame: .zero)
-        configureView()
+        // configureView()
         configureDebitCardView()
         configureGBPView()
         configureBankView()
@@ -1263,32 +1263,32 @@ public class FlutterwavePayViewController: BaseViewController {
             return 0
         case 1:
             //||  RaveConfig.sharedConfig().country == "UG"
-            return FlutterwaveConfig.sharedConfig().currencyCode == "" || FlutterwaveConfig.sharedConfig().country == "GHS" || checkIfPaymentOptionIsExcluded(paymentOption: .debitCard)  ? 0 :  65
+            return FlutterwaveConfig.sharedConfig().currencyCode == "" || FlutterwaveConfig.sharedConfig().country == "GHS" || checkIfPaymentOptionIsExcluded(paymentOption: .debitCard)  ? 0 :  0
         case 2:
-            return  (FlutterwaveConfig.sharedConfig().currencyCode == "USD" || FlutterwaveConfig.sharedConfig().currencyCode == "ZAR") && !checkIfPaymentOptionIsExcluded(paymentOption: .bankAccount)  ? 65 : 0
+            return  (FlutterwaveConfig.sharedConfig().currencyCode == "USD" || FlutterwaveConfig.sharedConfig().currencyCode == "ZAR") && !checkIfPaymentOptionIsExcluded(paymentOption: .bankAccount)  ? 0 : 0
         case 3:
-            return FlutterwaveConfig.sharedConfig().currencyCode == "KES" && !checkIfPaymentOptionIsExcluded(paymentOption: .mobileMoney) ? 65 : 0
+            return FlutterwaveConfig.sharedConfig().currencyCode == "KES" && !checkIfPaymentOptionIsExcluded(paymentOption: .mobileMoney) ? 0 : 0
         case 4:
-            return FlutterwaveConfig.sharedConfig().currencyCode == "GHS" && !checkIfPaymentOptionIsExcluded(paymentOption: .mobileMoney) ? 65 : 0
+            return FlutterwaveConfig.sharedConfig().currencyCode == "GHS" && !checkIfPaymentOptionIsExcluded(paymentOption: .mobileMoney) ? 0 : 0
         case 5:
-            return FlutterwaveConfig.sharedConfig().currencyCode == "UGX" && !checkIfPaymentOptionIsExcluded(paymentOption: .mobileMoney) ? 65 : 0
+            return FlutterwaveConfig.sharedConfig().currencyCode == "UGX" && !checkIfPaymentOptionIsExcluded(paymentOption: .mobileMoney) ? 0 : 0
         case 6:
-            return FlutterwaveConfig.sharedConfig().currencyCode == "RWF"  && !checkIfPaymentOptionIsExcluded(paymentOption: .mobileMoney) ? 65 : 0
+            return FlutterwaveConfig.sharedConfig().currencyCode == "RWF"  && !checkIfPaymentOptionIsExcluded(paymentOption: .mobileMoney) ? 0 : 0
         case 7:
-            return (FlutterwaveConfig.sharedConfig().currencyCode == "XAF" || FlutterwaveConfig.sharedConfig().currencyCode == "XOF") && !checkIfPaymentOptionIsExcluded(paymentOption: .mobileMoney) ? 65 : 0
+            return (FlutterwaveConfig.sharedConfig().currencyCode == "XAF" || FlutterwaveConfig.sharedConfig().currencyCode == "XOF") && !checkIfPaymentOptionIsExcluded(paymentOption: .mobileMoney) ? 0 : 0
         case 8:
-            return FlutterwaveConfig.sharedConfig().currencyCode == "ZMW"  && !checkIfPaymentOptionIsExcluded(paymentOption: .mobileMoney) ? 65 : 0
+            return FlutterwaveConfig.sharedConfig().currencyCode == "ZMW"  && !checkIfPaymentOptionIsExcluded(paymentOption: .mobileMoney) ? 0 : 0
         case 9:
-            return FlutterwaveConfig.sharedConfig().currencyCode == "GBP" && !checkIfPaymentOptionIsExcluded(paymentOption: .bankAccount)  ? 65 : 0
+            return FlutterwaveConfig.sharedConfig().currencyCode == "GBP" && !checkIfPaymentOptionIsExcluded(paymentOption: .bankAccount)  ? 0 : 0
         case 10:
-            return FlutterwaveConfig.sharedConfig().currencyCode == "NGN" && !checkIfPaymentOptionIsExcluded(paymentOption: .ussd)  ? 65 : 0
+            return FlutterwaveConfig.sharedConfig().currencyCode == "NGN" && !checkIfPaymentOptionIsExcluded(paymentOption: .ussd)  ? 0 : 0
         case 11:
-            return FlutterwaveConfig.sharedConfig().currencyCode == "NGN" && !checkIfPaymentOptionIsExcluded(paymentOption: .barter) ? 65 : 0
+            return FlutterwaveConfig.sharedConfig().currencyCode == "NGN" && !checkIfPaymentOptionIsExcluded(paymentOption: .barter) ? 0 : 0
         //            return false
         case 12:
-            return FlutterwaveConfig.sharedConfig().currencyCode == "NGN"  && !checkIfPaymentOptionIsExcluded(paymentOption: .bankAccount) ? 65  : 0
+            return FlutterwaveConfig.sharedConfig().currencyCode == "NGN"  && !checkIfPaymentOptionIsExcluded(paymentOption: .bankAccount) ? 0  : 0
         case 13:
-            return FlutterwaveConfig.sharedConfig().currencyCode == "NGN"  && !checkIfPaymentOptionIsExcluded(paymentOption: .bankTransfer) ? 65 : 0
+            return FlutterwaveConfig.sharedConfig().currencyCode == "NGN"  && !checkIfPaymentOptionIsExcluded(paymentOption: .bankTransfer) ? 0 : 0
         default:
             return 0
         }
