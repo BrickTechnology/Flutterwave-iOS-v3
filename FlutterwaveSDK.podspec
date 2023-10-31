@@ -32,8 +32,7 @@ Pod::Spec.new do |s|
     s.swift_versions = '5.0'
 
     s.source_files = 'FlutterwaveSDK/**/*.{h,m,swift}'
-    s.resource_bundles =  'FlutterwaveSDK/**/*.{xcassets,json,png}'
-
+    s.ios.resource_bundle = { 'FlutterwaveSDK' => 'FlutterwaveSDK/**/*.{xcassets,json,png}' }
     s.public_header_files = 'Classes/*.h'
 
     s.frameworks = 'UIKit'
