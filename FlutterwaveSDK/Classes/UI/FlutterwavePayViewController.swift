@@ -59,7 +59,7 @@ public class FlutterwavePayViewController: BaseViewController {
 
 
 
-    var expandables = [Expandables(isExpanded: false, section: 0),Expandables(isExpanded: true, section: 1),Expandables(isExpanded: false, section: 2),Expandables(isExpanded: false, section: 3),Expandables(isExpanded: false, section: 4),Expandables(isExpanded: false, section: 5),Expandables(isExpanded: false, section: 6),Expandables(isExpanded: false, section: 7),Expandables(isExpanded: false, section: 8),Expandables(isExpanded: false, section: 9),Expandables(isExpanded: false, section: 10),Expandables(isExpanded: false, section: 11),Expandables(isExpanded: false, section: 12), Expandables(isExpanded: false, section: 13)]
+    var expandables = [Expandables(isExpanded: false, section: 0),Expandables(isExpanded: false, section: 1),Expandables(isExpanded: false, section: 2),Expandables(isExpanded: false, section: 3),Expandables(isExpanded: false, section: 4),Expandables(isExpanded: false, section: 5),Expandables(isExpanded: false, section: 6),Expandables(isExpanded: false, section: 7),Expandables(isExpanded: false, section: 8),Expandables(isExpanded: false, section: 9),Expandables(isExpanded: false, section: 10),Expandables(isExpanded: false, section: 11),Expandables(isExpanded: false, section: 12), Expandables(isExpanded: false, section: 13)]
 
     var headers = [FlutterwaveHeaderView?]()
     public weak var delegate: FlutterwavePayProtocol?
