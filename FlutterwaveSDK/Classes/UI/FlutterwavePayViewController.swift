@@ -59,7 +59,7 @@ public class FlutterwavePayViewController: BaseViewController {
 
 
 
-    var expandables = [Expandables(isExpanded: true, section: 0),Expandables(isExpanded: false, section: 1),Expandables(isExpanded: false, section: 2),Expandables(isExpanded: false, section: 3),Expandables(isExpanded: false, section: 4),Expandables(isExpanded: false, section: 5),Expandables(isExpanded: false, section: 6),Expandables(isExpanded: false, section: 7),Expandables(isExpanded: false, section: 8),Expandables(isExpanded: false, section: 9),Expandables(isExpanded: false, section: 10),Expandables(isExpanded: false, section: 11),Expandables(isExpanded: false, section: 12), Expandables(isExpanded: false, section: 13)]
+    var expandables = [Expandables(isExpanded: false, section: 0),Expandables(isExpanded: true, section: 1),Expandables(isExpanded: false, section: 2),Expandables(isExpanded: false, section: 3),Expandables(isExpanded: false, section: 4),Expandables(isExpanded: false, section: 5),Expandables(isExpanded: false, section: 6),Expandables(isExpanded: false, section: 7),Expandables(isExpanded: false, section: 8),Expandables(isExpanded: false, section: 9),Expandables(isExpanded: false, section: 10),Expandables(isExpanded: false, section: 11),Expandables(isExpanded: false, section: 12), Expandables(isExpanded: false, section: 13)]
 
     var headers = [FlutterwaveHeaderView?]()
     public weak var delegate: FlutterwavePayProtocol?
@@ -1303,64 +1303,64 @@ public class FlutterwavePayViewController: BaseViewController {
             let attributedString = NSMutableAttributedString(string: headerTitle, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),NSAttributedString.Key.foregroundColor: UIColor(hex: "#4A4A4A")])
             attributedString.addAttributes([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)], range:NSRange(headerTitle.range(of: "Debit Card")!, in: headerTitle))
             headers[1]?.titleLabel.attributedText = attributedString
-            headers[1]?.arrowButton.tag = 1
-            headers[1]?.button.tag = 1
+            // headers[1]?.arrowButton.tag = 1
+            // headers[1]?.button.tag = 1
             return headers[1]
         case 2:
             let headerTitle = "Pay with your Bank Account"
             let attributedString = NSMutableAttributedString(string: headerTitle, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),NSAttributedString.Key.foregroundColor: UIColor(hex: "#4A4A4A")])
             attributedString.addAttributes([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)], range:NSRange(headerTitle.range(of: "Bank Account")!, in: headerTitle))
             headers[2]?.titleLabel.attributedText = attributedString
-            headers[2]?.arrowButton.tag = 2
-            headers[2]?.button.tag = 2
+            // headers[2]?.arrowButton.tag = 2
+            // headers[2]?.button.tag = 2
             return headers[2]
         case 3:
             let headerTitle = "Pay with M-PESA"
             let attributedString = NSMutableAttributedString(string: headerTitle, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),NSAttributedString.Key.foregroundColor: UIColor(hex: "#4A4A4A")])
             attributedString.addAttributes([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)], range:NSRange(headerTitle.range(of: "M-PESA")!, in: headerTitle))
             headers[3]?.titleLabel.attributedText = attributedString
-            headers[3]?.arrowButton.tag = 3
-            headers[3]?.button.tag = 3
+            // headers[3]?.arrowButton.tag = 3
+            // headers[3]?.button.tag = 3
             return headers[3]
         case 4:
             let headerTitle = "Pay with Mobile Money Ghana"
             let attributedString = NSMutableAttributedString(string: headerTitle, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),NSAttributedString.Key.foregroundColor: UIColor(hex: "#4A4A4A")])
             attributedString.addAttributes([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)], range:NSRange(headerTitle.range(of: "Mobile Money Ghana")!, in: headerTitle))
             headers[4]?.titleLabel.attributedText = attributedString
-            headers[4]?.arrowButton.tag = 4
-            headers[4]?.button.tag = 4
+            // headers[4]?.arrowButton.tag = 4
+            // headers[4]?.button.tag = 4
             return headers[4]
         case 5:
             let headerTitle = "Pay with Mobile Money Uganda"
             let attributedString = NSMutableAttributedString(string: headerTitle, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),NSAttributedString.Key.foregroundColor: UIColor(hex: "#4A4A4A")])
             attributedString.addAttributes([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)], range:NSRange(headerTitle.range(of: "Mobile Money Uganda")!, in: headerTitle))
             headers[5]?.titleLabel.attributedText = attributedString
-            headers[5]?.arrowButton.tag = 5
-            headers[5]?.button.tag = 5
+            // headers[5]?.arrowButton.tag = 5
+            // headers[5]?.button.tag = 5
             return headers[5]
         case 6:
             let headerTitle = "Pay with Mobile Money Rwanda"
             let attributedString = NSMutableAttributedString(string: headerTitle, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),NSAttributedString.Key.foregroundColor: UIColor(hex: "#4A4A4A")])
             attributedString.addAttributes([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)], range:NSRange(headerTitle.range(of: "Mobile Money Rwanda")!, in: headerTitle))
             headers[6]?.titleLabel.attributedText = attributedString
-            headers[6]?.arrowButton.tag = 6
-            headers[6]?.button.tag = 6
+            // headers[6]?.arrowButton.tag = 6
+            // headers[6]?.button.tag = 6
             return headers[6]
         case 7:
             let headerTitle = "Pay with Mobile Money Francophone"
             let attributedString = NSMutableAttributedString(string: headerTitle, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),NSAttributedString.Key.foregroundColor: UIColor(hex: "#4A4A4A")])
             attributedString.addAttributes([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)], range:NSRange(headerTitle.range(of: "Mobile Money Francophone")!, in: headerTitle))
             headers[7]?.titleLabel.attributedText = attributedString
-            headers[7]?.arrowButton.tag = 7
-            headers[7]?.button.tag = 7
+            // headers[7]?.arrowButton.tag = 7
+            // headers[7]?.button.tag = 7
             return headers[7]
         case 8:
             let headerTitle = "Pay with Mobile Money Zambia"
             let attributedString = NSMutableAttributedString(string: headerTitle, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),NSAttributedString.Key.foregroundColor: UIColor(hex: "#4A4A4A")])
             attributedString.addAttributes([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)], range:NSRange(headerTitle.range(of: "Mobile Money Zambia")!, in: headerTitle))
             headers[8]?.titleLabel.attributedText = attributedString
-            headers[8]?.arrowButton.tag = 8
-            headers[8]?.button.tag = 8
+            // headers[8]?.arrowButton.tag = 8
+            // headers[8]?.button.tag = 8
             return headers[8]
 
         case 9:
@@ -1368,40 +1368,40 @@ public class FlutterwavePayViewController: BaseViewController {
             let attributedString = NSMutableAttributedString(string: headerTitle, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),NSAttributedString.Key.foregroundColor: UIColor(hex: "#4A4A4A")])
             attributedString.addAttributes([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)], range:NSRange(headerTitle.range(of: " Bank Account")!, in: headerTitle))
             headers[9]?.titleLabel.attributedText = attributedString
-            headers[9]?.arrowButton.tag = 9
-            headers[9]?.button.tag = 9
+            // headers[9]?.arrowButton.tag = 9
+            // headers[9]?.button.tag = 9
             return headers[9]
         case 10:
             let headerTitle = "Pay with USSD"
             let attributedString = NSMutableAttributedString(string: headerTitle, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),NSAttributedString.Key.foregroundColor: UIColor(hex: "#4A4A4A")])
             attributedString.addAttributes([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)], range:NSRange(headerTitle.range(of: "USSD")!, in: headerTitle))
             headers[10]?.titleLabel.attributedText = attributedString
-            headers[10]?.arrowButton.tag = 10
-            headers[10]?.button.tag = 10
+            // headers[10]?.arrowButton.tag = 10
+            // headers[10]?.button.tag = 10
             return headers[10]
         case 11:
             let headerTitle = "Pay with Barter"
             let attributedString = NSMutableAttributedString(string: headerTitle, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),NSAttributedString.Key.foregroundColor: UIColor(hex: "#4A4A4A")])
             attributedString.addAttributes([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)], range:NSRange(headerTitle.range(of: "Barter")!, in: headerTitle))
             headers[11]?.titleLabel.attributedText = attributedString
-            headers[11]?.arrowButton.tag = 11
-            headers[11]?.button.tag = 11
+            // headers[11]?.arrowButton.tag = 11
+            // headers[11]?.button.tag = 11
             return headers[11]
         case 12:
             let headerTitle = "Pay with your Bank Account"
             let attributedString = NSMutableAttributedString(string: headerTitle, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),NSAttributedString.Key.foregroundColor: UIColor(hex: "#4A4A4A")])
             attributedString.addAttributes([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)], range:NSRange(headerTitle.range(of: " Bank Account")!, in: headerTitle))
             headers[12]?.titleLabel.attributedText = attributedString
-            headers[12]?.arrowButton.tag = 12
-            headers[12]?.button.tag = 12
+            // headers[12]?.arrowButton.tag = 12
+            // headers[12]?.button.tag = 12
             return headers[12]
         case 13:
             let headerTitle = "Pay with Bank Transfer"
             let attributedString = NSMutableAttributedString(string: headerTitle, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15),NSAttributedString.Key.foregroundColor: UIColor(hex: "#4A4A4A")])
             attributedString.addAttributes([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)], range:NSRange(headerTitle.range(of: " Bank Transfer")!, in: headerTitle))
             headers[13]?.titleLabel.attributedText = attributedString
-            headers[13]?.arrowButton.tag = 13
-            headers[13]?.button.tag = 13
+            // headers[13]?.arrowButton.tag = 13
+            // headers[13]?.button.tag = 13
             return headers[13]
 
         default:
@@ -1459,7 +1459,7 @@ public class FlutterwavePayViewController: BaseViewController {
     func getHeader()-> FlutterwaveHeaderView{
         let header = FlutterwaveHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 100))
         header.backgroundColor = UIColor(hex: "#FBEED8")
-        header.button.addTarget(self, action: #selector(handleButtonTap(_:)), for: .touchUpInside)
+        // header.button.addTarget(self, action: #selector(handleButtonTap(_:)), for: .touchUpInside)
         return header
     }
     @objc func handleButtonTap(_ sender:UIButton){
@@ -1473,7 +1473,7 @@ public class FlutterwavePayViewController: BaseViewController {
             self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .fade)
             expandables[section].isExpanded = false
             self.tableView.deleteRows(at: [IndexPath(row: 0, section: section)], with: .fade)
-            self.headers[section]?.arrowButton.setImage(UIImage(named: "rave_up_arrow",in: Bundle.getResourcesBundle(), compatibleWith: nil), for: .normal)
+            // self.headers[section]?.arrowButton.setImage(UIImage(named: "rave_up_arrow",in: Bundle.getResourcesBundle(), compatibleWith: nil), for: .normal)
         }else{
             //Expand current view and collapse the other sections
             var expandedIndexPath = [IndexPath]()
@@ -1481,13 +1481,13 @@ public class FlutterwavePayViewController: BaseViewController {
             for item in self.expandables{
                 if item.isExpanded == true{
                     expandedIndexPath.append(IndexPath(row: 0, section: item.section))
-                    self.headers[section]?.arrowButton.setImage(UIImage(named: "rave_up_arrow",in: Bundle.getResourcesBundle(), compatibleWith: nil), for: .normal)
+                // self.headers[section]?.arrowButton.setImage(UIImage(named: "rave_up_arrow",in: Bundle.getResourcesBundle(), compatibleWith: nil), for: .normal)
                 }
             }
 
             for item in self.expandables{
                 newExpandables.append(Expandables(isExpanded: false, section: item.section))
-                self.headers[item.section]?.arrowButton.setImage(UIImage(named: "rave_up_arrow",in: Bundle.getResourcesBundle(), compatibleWith: nil), for: .normal)
+                // self.headers[item.section]?.arrowButton.setImage(UIImage(named: "rave_up_arrow",in: Bundle.getResourcesBundle(), compatibleWith: nil), for: .normal)
             }
             self.expandables = newExpandables
 
@@ -1497,7 +1497,7 @@ public class FlutterwavePayViewController: BaseViewController {
 
 
             self.expandables[section].isExpanded = true
-            self.headers[section]?.arrowButton.setImage(UIImage(named: "rave_down_arrow",in: Bundle.getResourcesBundle(), compatibleWith: nil), for: .normal)
+            // self.headers[section]?.arrowButton.setImage(UIImage(named: "rave_down_arrow",in: Bundle.getResourcesBundle(), compatibleWith: nil), for: .normal)
             self.tableView.insertRows(at: [IndexPath(row: 0, section: section)], with: .fade)
             //Check if selected tab is Bank Account and Country is US
             if section == 2{
