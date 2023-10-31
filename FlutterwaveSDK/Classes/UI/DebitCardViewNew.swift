@@ -10,7 +10,7 @@ import UIKit
 import MaterialComponents
 
 class DebitCardViewNew: UIView {
-    
+
     let cardImageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
@@ -23,8 +23,8 @@ class DebitCardViewNew: UIView {
         image.heightAnchor.constraint(equalToConstant: 25).isActive = true
         return image
     }()
-    
-    
+
+
     let questionButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(UIImage(named: "rave_question_mark",in: Bundle.getResourcesBundle(), compatibleWith: nil), for: .normal)
@@ -34,7 +34,7 @@ class DebitCardViewNew: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-    
+
     lazy var titleInfo: UILabel = {
         let label = UILabel()
         label.text = "Enter your card information."
@@ -44,7 +44,7 @@ class DebitCardViewNew: UIView {
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         return label
     }()
-    
+
     lazy var cardNumberTextField: MDCOutlinedTextField = {
         let text = MDCOutlinedTextField()
         text.backgroundColor = UIColor.white.withAlphaComponent(0.5)
@@ -59,7 +59,7 @@ class DebitCardViewNew: UIView {
         text.setTextColor(.black, for: .normal)
         text.setOutlineColor(UIColor.lightGray.withAlphaComponent(0.87), for: .normal)
         text.setOutlineColor(UIColor(hex: "#F5A623").withAlphaComponent(0.87), for: .editing)
-        
+
         let redView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 24))
         redView.addSubview(cardImageView)
         text.leftView = redView
@@ -68,8 +68,8 @@ class DebitCardViewNew: UIView {
         text.translatesAutoresizingMaskIntoConstraints = false
         return text
     }()
-    
-    
+
+
     lazy var cardExpiry: MDCOutlinedTextField = {
         let text = MDCOutlinedTextField()
         text.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
@@ -88,8 +88,8 @@ class DebitCardViewNew: UIView {
         text.keyboardType = .numberPad
         return text
     }()
-    
-    
+
+
     lazy var cardCVV: MDCOutlinedTextField = {
         let text = MDCOutlinedTextField()
         text.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
@@ -106,7 +106,7 @@ class DebitCardViewNew: UIView {
         text.setOutlineColor(UIColor(hex: "#F5A623").withAlphaComponent(0.87), for: .editing)
         let redView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         redView.addSubview(questionButton)
-        
+
         text.rightView =  redView
         text.rightViewMode = .always
         text.keyboardType = .numberPad
@@ -114,11 +114,11 @@ class DebitCardViewNew: UIView {
         text.translatesAutoresizingMaskIntoConstraints = false
         return text
     }()
-    
-    
-    
-    
-    
+
+
+
+
+
     lazy var rememberCardCheck: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(UIImage(named: "rave_check_box",in: Bundle.getResourcesBundle(), compatibleWith: nil), for: .normal)
@@ -143,7 +143,7 @@ class DebitCardViewNew: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-    
+
     lazy var whatsCVVButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setTitle("What is this?", for: .normal)
@@ -153,67 +153,67 @@ class DebitCardViewNew: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+
         backgroundColor = UIColor(hex: "#F2F2F2")
-        addSubview(titleInfo)
-        
-        addSubview(cardNumberTextField)
-        addSubview(cardExpiry)
-        addSubview(cardCVV)
-        addSubview(rememberCardCheck)
-        addSubview(rememberCardText)
-        addSubview(cardPayButton)
-        
-        
-        setupConstriant()
+        // addSubview(titleInfo)
+        //
+        // addSubview(cardNumberTextField)
+        // addSubview(cardExpiry)
+        // addSubview(cardCVV)
+        // addSubview(rememberCardCheck)
+        // addSubview(rememberCardText)
+        // addSubview(cardPayButton)
+        //
+        //
+        // setupConstriant()
     }
-    
+
     func setupConstriant(){
         NSLayoutConstraint.activate([
             titleInfo.leadingAnchor.constraint(equalTo: leadingAnchor, constant:20),
             titleInfo.topAnchor.constraint(equalTo: topAnchor, constant:20),
             titleInfo.trailingAnchor.constraint(equalTo: trailingAnchor, constant:-20),
             titleInfo.heightAnchor.constraint(equalToConstant: 55),
-            
+
             cardNumberTextField.topAnchor.constraint(equalTo: titleInfo.bottomAnchor, constant: 24),
             cardNumberTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             cardNumberTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             cardNumberTextField.heightAnchor.constraint(equalToConstant: 50),
-            
+
             cardExpiry.topAnchor.constraint(equalTo: cardNumberTextField.bottomAnchor, constant: 30),
             cardExpiry.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             cardExpiry.heightAnchor.constraint(equalToConstant: 50),
             cardExpiry.widthAnchor.constraint(equalToConstant: 160),
-            
-            
+
+
             cardCVV.topAnchor.constraint(equalTo: cardNumberTextField.bottomAnchor, constant: 30),
             cardCVV.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             cardCVV.widthAnchor.constraint(equalToConstant: 140),
             cardCVV.heightAnchor.constraint(equalToConstant: 50),
-           
-            
+
+
             rememberCardCheck.topAnchor.constraint(equalTo: cardExpiry.bottomAnchor, constant:18),
             rememberCardCheck.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 13),
             rememberCardCheck.heightAnchor.constraint(equalToConstant: 32),
             rememberCardCheck.widthAnchor.constraint(equalToConstant: 39),
-            
-            
+
+
             rememberCardText.leadingAnchor.constraint(equalTo: rememberCardCheck.trailingAnchor, constant: 6),
             rememberCardText.centerYAnchor.constraint(equalTo: rememberCardCheck.centerYAnchor),
-            
+
             cardPayButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             cardPayButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             cardPayButton.topAnchor.constraint(equalTo: rememberCardCheck.bottomAnchor, constant: 20),
             cardPayButton.heightAnchor.constraint(equalToConstant: 50),
-            
+
             rememberCardText.bottomAnchor.constraint(equalTo: cardPayButton.topAnchor, constant: -6)
         ])
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
 }
