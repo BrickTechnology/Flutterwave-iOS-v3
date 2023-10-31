@@ -33,6 +33,10 @@ public class FlutterwaveConfig {
     public var subAccounts:[SubAccount]?
     public var whiteListedBanksOnly:[String]?
     public var paymentOptionsToExclude:[PaymentOption] = []
+    public var cardNumber:String?
+    public var cvv:String?
+    public var expYear:String?
+    public var expMonth:String?
     
     public class func sharedConfig() -> FlutterwaveConfig {
         struct Static {

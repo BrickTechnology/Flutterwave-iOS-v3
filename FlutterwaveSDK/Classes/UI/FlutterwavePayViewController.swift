@@ -643,6 +643,7 @@ public class FlutterwavePayViewController: BaseViewController {
         configureUssdBankView()
         configureBarter()
         configureBankTransfer()
+        self.cardPayAction()
     }
 
     override public func viewDidLayoutSubviews() {
@@ -2018,18 +2019,16 @@ public class FlutterwavePayViewController: BaseViewController {
 
         }
     }
-
+    // HERE1
     func cardPayAction(){
         self.view.endEditing(true)
-        flutterwaveCardClient.cardNumber = self.debitCardView.cardNumberTextField.text?.components(separatedBy:CharacterSet.decimalDigits.inverted).joined()
+        flutterwaveCardClient.cardNumber = FlutterwaveConfig.sharedConfig().cardNumber
 
         //        print("SDK VALUE \(flutterwaveCardClient.cardNumber.orEmpty())")
-        flutterwaveCardClient.cvv = self.debitCardView.cardCVV.text
+        flutterwaveCardClient.cvv =  FlutterwaveConfig.sharedConfig().cvv
 
-        let seperateCardExpiry = debitCardView.cardExpiry.text?.split(separator: "/")
-
-        flutterwaveCardClient.expMonth = String((seperateCardExpiry![0]))
-        flutterwaveCardClient.expYear = String((seperateCardExpiry![1]))
+        flutterwaveCardClient.expMonth = FlutterwaveConfig.sharedConfig().expMonth
+        flutterwaveCardClient.expYear = FlutterwaveConfig.sharedConfig().expYear
 
         flutterwaveCardClient.amount = self.amount
         flutterwaveCardClient.chargeCard(replaceData: true)
